@@ -1,0 +1,109 @@
+.clients-title {
+    @include font(36px, 700, 1.16);
+    letter-spacing: 0.03em;
+    text-align: center;
+    // margin-bottom: 50px;
+    color: var(--primary-text-color);
+
+    @include mobile {
+    margin-bottom: 30px;
+    }
+
+    @include tablet {
+        margin-bottom: 30px; 
+    }
+
+    @include desktop {
+        margin-bottom: 50px;
+    }
+}
+
+.clients-social {
+    @include mobile {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-left: 15px;
+    }
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        margin-left: 0px;
+    }
+    @include desktop {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0px;
+        margin-left: 0px;
+    }
+
+    & .icon-clients + .icon-clients  {
+            
+            @include mobile {
+                
+            }
+            @include tablet {
+                
+            }
+            @include desktop {
+                margin-left: 30px; 
+            }
+        }
+    }
+
+.icon-clients {
+    display: inline-block;
+
+    &:hover svg,
+    &:focus svg {
+        border: var(--accent-color);
+        fill: var(--accent-color);
+    }
+}
+
+
+.svg-clients {
+    fill: var(--icons-color);
+
+    transition-property: fill;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+}
+
+.clients-link {
+    @include flex-box-positioning(center);
+    @include size(170px, 92px);
+    justify-content: center;
+    border-radius: 4px;
+    border: 1px solid #AFB1B8;
+
+    transition-property: border-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+
+    @include mobile {
+        width: 210px;
+    }
+
+    @include tablet {
+        width: 226px;
+    }
+
+    @include desktop {
+       width: 170px;
+    }
+   
+
+    &:hover svg,
+    &:focus svg {
+        border-color: var(--accent-color);
+        fill: var(--accent-color);
+    }
+
+    &:hover,
+    &:focus {
+        border-color: var(--accent-color);
+        fill: var(--accent-color);
+    }
+}

@@ -1,0 +1,179 @@
+.feature-list {
+
+    @include mobile {
+        display: block;
+    }
+
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+    }
+
+    @include desktop {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 0px;
+    }
+}
+
+.feature-img {
+    @include mobile {
+        @include flex-box-positioning(center);
+        justify-content: center;
+        padding: 25px 0;
+        background-color: var(--background-icon-color);
+        margin-bottom: 30px;  
+    }
+
+    @include tablet {
+        @include flex-box-positioning(center);
+        justify-content: center;
+        @include size(354px, 120px);
+        background-color: var(--background-icon-color);
+        margin-bottom: 30px;  
+    }
+
+    @include desktop {
+        @include flex-box-positioning(center);
+        justify-content: center;
+        @include size(270px, 120px);
+        background-color: var(--background-icon-color);
+        margin-bottom: 30px;  
+    }
+}
+
+.feature-item {
+    @include mobile {
+        margin: 15px 30px;
+    }
+
+    @include tablet {
+        margin: 0;
+    }
+
+    @include desktop {
+        margin: 0;
+    }
+}
+
+.feature-list .feature-item + .feature-item {
+
+    @include tablet {
+       gap: 30px;
+    }
+
+    @include desktop {
+        margin-left: 30px;
+        gap: 0px;
+    }
+}
+
+.img-list {
+    display: flex;
+
+    & .img-item + .img-item {
+        margin-left: 30px;
+    }
+}
+
+.team-item {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.description-block {
+
+    @include mobile {
+        width: 100%;
+    }
+
+    @include tablet {
+        width: 354px;
+    }
+    @include desktop {
+        width: 100%;
+    }
+}
+
+.description-title {
+    @include font(14px, 700, 1.14);
+    letter-spacing: 0.03em;
+
+    @include mobile {
+        display: block;
+        width: fit-content;
+        margin: auto;
+    }
+
+    @include tablet {
+        display: inline;
+    }
+
+    @include desktop {
+        display: inline;
+    }
+    
+}
+
+.description {
+    margin-top: 10px;
+    @include font(14px, 400, 1.71);
+    letter-spacing: 0.03em;
+    color:rgba(117, 117, 117, 1);
+}
+
+.visually-hidden {
+    @include size(1px, 1px);
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+
+// Our work
+
+.img-item {
+  position: relative;
+}
+
+.custom-section {
+    @include mobile {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+    }
+
+    @include desktop {
+        display: block;
+    }
+}
+
+.section-block::after {
+        @include flex-box-positioning(center);
+        @include size(370px, 70px);
+        content: '';
+        position: absolute;
+        justify-content: center;
+        background-color: rgba(47, 48, 58, 0.8);
+        bottom: 0;
+        color: var(--accent-color); 
+    }
+
+.desc {
+    @include font(14px, 700, 1.14);
+        letter-spacing:  0.03em;
+        position: absolute;
+        bottom: 27px;
+        left: 107px;
+        font-style: normal;
+        text-align: center;
+        text-transform: uppercase;
+        color:var(--header-text-color);
+}

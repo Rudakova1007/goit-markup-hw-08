@@ -1,0 +1,95 @@
+
+.hero-wrapper {  
+    max-width: 696px; 
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;  
+    
+    @include mobile {
+        max-width: 75%; 
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    @include tablet {
+        max-width: 45%; 
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    @include desktop {
+        max-width: 696px; 
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+}
+
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-color: #C4C4C4;
+    background-repeat: no-repeat;  
+    background-size: cover;
+    color: var(--main-block-text-color);
+    max-width: 1600px;
+    margin: 0 auto;
+
+    @include mobile {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-mob-1x.jpg");
+        background-size: cover;
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-mob-2x.jpg");
+        }
+    }
+
+    @include tablet {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-tab-1x.jpg");
+        background-size: cover;
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-tab-2x.jpg");
+        }
+    }
+
+    @include desktop {
+        background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-desk-1x.jpg");
+        background-size: 1600px 600px;
+
+        @include retina {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-desk-2x.jpg");
+        }
+    }
+}
+
+.hero-title {
+
+    @include mobile {
+        @include font(26px, 900, 1.61);
+        // letter-spacing: 0.06em;
+        margin-bottom: 30px;
+        color: var(--header-text-color);
+        text-transform: uppercase;
+    
+    }
+
+    @include tablet {
+        @include font(26px, 900, 1.61);
+        // letter-spacing: 0.06em;
+        margin-bottom: 30px;
+        color: var(--header-text-color);
+        text-transform: uppercase;
+    
+    }
+
+    @include desktop {
+        @include font(44px, 900, 1.36);
+        letter-spacing: 0.06em;
+        margin-bottom: 30px;
+        color: var(--header-text-color);
+        text-transform: uppercase;
+    }
+}

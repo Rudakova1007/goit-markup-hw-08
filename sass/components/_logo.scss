@@ -1,0 +1,16 @@
+.site-logo {
+    @include font(26px, 700, 1.19);
+    letter-spacing:  0.03em;
+    display: inline-block;
+    font-family: var(--secondary-font);
+    text-decoration: none;
+    color: var(--accent-color);
+
+    &__text {
+        color: var(--secondary-logo-link);
+    }
+
+    &__text--inverse {
+        color: var( --footer-text-color);
+    }
+}
