@@ -11,18 +11,20 @@
 .main-nav {
   @extend .container;
   @include mobile {
-    @include flex-box-positioning(center);
-    justify-content: space-between;
+   
     padding-left: 15px;
     padding-right: 15px;
     height: 60px;
   }
 
   @include tablet {
-    @include flex-box-positioning(center);
-    justify-content: space-between;
     height: 100%;
   }
+
+  @include mobileTablet {
+  @include flex-box-positioning(center);
+  justify-content: space-between;
+}
 
   @include desktop {
     @include flex-box-positioning(center);
@@ -184,11 +186,10 @@
     &:focus svg {
       fill: var(--accent-color);
     }
-  @include mobile {
+  @include mobileTablet {
     display: block;
   }
   @include tablet {
-    display: block;
     text-decoration: none;
     color: var(--secondary-text-color);
     padding-top: 5px;

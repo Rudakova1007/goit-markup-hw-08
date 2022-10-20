@@ -12,48 +12,31 @@
 
     @include desktop {
         display: flex;
-        flex-wrap: nowrap;
-        gap: 0px;
     }
 }
 
 .feature-img {
+    @include flex-box-positioning(center);
+    justify-content: center;
+    background-color: var(--background-icon-color);
+    margin-bottom: 30px; 
+
     @include mobile {
-        @include flex-box-positioning(center);
-        justify-content: center;
         padding: 25px 0;
-        background-color: var(--background-icon-color);
-        margin-bottom: 30px;  
     }
 
     @include tablet {
-        @include flex-box-positioning(center);
-        justify-content: center;
-        @include size(354px, 120px);
-        background-color: var(--background-icon-color);
-        margin-bottom: 30px;  
+        @include size(354px, 120px); 
     }
 
     @include desktop {
-        @include flex-box-positioning(center);
-        justify-content: center;
-        @include size(270px, 120px);
-        background-color: var(--background-icon-color);
-        margin-bottom: 30px;  
+        @include size(270px, 120px); 
     }
 }
 
 .feature-item {
     @include mobile {
         margin: 15px 30px;
-    }
-
-    @include tablet {
-        margin: 0;
-    }
-
-    @include desktop {
-        margin: 0;
     }
 }
 
@@ -65,7 +48,6 @@
 
     @include desktop {
         margin-left: 30px;
-        gap: 0px;
     }
 }
 
@@ -84,15 +66,8 @@
 
 .description-block {
 
-    @include mobile {
-        width: 100%;
-    }
-
     @include tablet {
         width: 354px;
-    }
-    @include desktop {
-        width: 100%;
     }
 }
 
@@ -104,14 +79,6 @@
         display: block;
         width: fit-content;
         margin: auto;
-    }
-
-    @include tablet {
-        display: inline;
-    }
-
-    @include desktop {
-        display: inline;
     }
     
 }
@@ -142,11 +109,7 @@
 }
 
 .custom-section {
-    @include mobile {
-        display: none;
-    }
-
-    @include tablet {
+    @include mobileTablet {
         display: none;
     }
 

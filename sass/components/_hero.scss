@@ -7,23 +7,14 @@
     
     @include mobile {
         max-width: 75%; 
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
     }
 
     @include tablet {
         max-width: 45%; 
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
     }
 
     @include desktop {
         max-width: 696px; 
-        margin-right: auto;
-        margin-left: auto;
-        text-align: center;
     }
 }
 
@@ -57,7 +48,7 @@
 
     @include desktop {
         background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-desk-1x.jpg");
-        background-size: 1600px 600px;
+        background-size: cover;
 
         @include retina {
             background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/header-img-desk-2x.jpg");
@@ -67,18 +58,8 @@
 
 .hero-title {
 
-    @include mobile {
+    @include mobileTablet {
         @include font(26px, 900, 1.61);
-        // letter-spacing: 0.06em;
-        margin-bottom: 30px;
-        color: var(--header-text-color);
-        text-transform: uppercase;
-    
-    }
-
-    @include tablet {
-        @include font(26px, 900, 1.61);
-        // letter-spacing: 0.06em;
         margin-bottom: 30px;
         color: var(--header-text-color);
         text-transform: uppercase;

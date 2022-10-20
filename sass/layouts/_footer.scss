@@ -5,8 +5,6 @@
 }
 
 .footer-block {
-  // @include flex-box-positioning(baseline);
-  // @extend .container;
 
   @include mobile {
     display: block;
@@ -30,31 +28,19 @@
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
-    column-gap: 0px;
-    row-gap: 0px;
+  
   }
 }
 
 .location {
-  @include mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-  }
 
-  @include tablet {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-  }
 
   @include desktop {
     display: block;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
   }
 }
 
@@ -96,29 +82,18 @@
 }
 
 .address__list {
+  
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
   @include mobile {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     margin-bottom: 60px;
   }
 
   @include tablet {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 0px;
-  }
-
-  @include desktop {
-    display: block;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 0px;
   }
 }
 
@@ -126,18 +101,16 @@
 
   @include mobile {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-left: 0px;
   }
 
   @include tablet {
     display: block;
+  }
+
+  @include mobileTablet {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin-left: 0px;
   }
 
   @include desktop {
@@ -178,13 +151,6 @@
 }
 
 .subscription {
-@include mobile {
-  margin-left: 0px;
-}
-
-@include tablet {
-  margin-left: 0px;
-}
 
 @include desktop {
   margin-left: 80px;
@@ -202,28 +168,20 @@
 }
 
 .subscription__form {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
   @include mobile {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
     margin-top: 60px;
   }
   
-  @include tablet {
+  @include mobileTablet {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 0px;
   }
   
   @include desktop {
     display: block;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    margin-top: 0px;
   }
 }
 
@@ -244,22 +202,14 @@
     letter-spacing: 0.03em;
   }
 
-  @include mobile {
+  @include mobileTablet {
     width: 450px;
-    margin-right: 0;
-    margin-left: 15px;
-  }
-  
-  @include tablet {
-    width: 450px;
-    margin-right: 0;
     margin-left: 15px;
   }
   
   @include desktop {
     width: 358px;
     margin-right: 12px;
-    margin-left: 0;
   }
 }
 
@@ -276,13 +226,5 @@
 
   @include mobile {
    margin-top: 20px;
-  }
-  
-  @include tablet {
-    margin-top: 0px;
-  }
-  
-  @include desktop {
-    margin-top: 0px;
   }
 }

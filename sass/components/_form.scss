@@ -1,13 +1,27 @@
 .modal__form {
-    @include size(448px, 342px);
+
+    @include mobileTablet {
+        @include size(370px, 342px);
+    }
+
+    @include desktop {
+        @include size(448px, 342px);
+    }
 }
 
 
 .modal__text {
-    @include font(20px, 700, 1.15);
     letter-spacing: 0.03em;
     text-align: center;
     margin-bottom: 12px;
+  
+    @include mobileTablet {
+        @include font(20px, 700, 1.5);
+    }
+
+    @include desktop {
+        @include font(20px, 700, 1.15);
+    }
 }
 
 .modal__group {
@@ -38,12 +52,6 @@
     color: var(--secondary-text-color);
 }
 
-.modal-accept__label {
-    @include flex-box-positioning(center);
-    margin-bottom: 4px;
-    color: var(--secondary-text-color);
-}
-
 .modal__input {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
@@ -55,6 +63,10 @@
     transition-property: border-color, fill;
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
+
+    @include mobileTablet {
+        @include size(370px, 40px);
+    }
 
     &:hover,
     &:focus {
@@ -71,6 +83,10 @@
     margin-bottom: 30px;
     display: flex;
     justify-content: center;
+
+    @include mobileTablet {
+        @include font(12px, 400, 1.16px);
+    }
 
     &__check:checked + .checkbox {
         background: var(--accent-color);
@@ -103,6 +119,12 @@
         clip: rect(0 0 0 0);
         overflow: hidden
     }
+}
+
+.modal-accept__label {
+    @include flex-box-positioning(center);
+    margin-bottom: 4px;
+    color: var(--secondary-text-color);
 }
 
 .checkbox {

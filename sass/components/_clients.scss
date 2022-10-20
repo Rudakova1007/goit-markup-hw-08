@@ -5,12 +5,8 @@
     // margin-bottom: 50px;
     color: var(--primary-text-color);
 
-    @include mobile {
+    @include mobileTablet {
     margin-bottom: 30px;
-    }
-
-    @include tablet {
-        margin-bottom: 30px; 
     }
 
     @include desktop {
@@ -19,33 +15,23 @@
 }
 
 .clients-social {
-    @include mobile {
-        display: flex;
+    display: flex;
+
+    @include mobileTablet {
         flex-wrap: wrap;
         gap: 30px;
+    }
+
+    @include mobile {
         margin-left: 15px;
     }
-    @include tablet {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 30px;
-        margin-left: 0px;
-    }
+
     @include desktop {
-        display: flex;
         flex-wrap: nowrap;
-        gap: 0px;
-        margin-left: 0px;
     }
 
     & .icon-clients + .icon-clients  {
-            
-            @include mobile {
-                
-            }
-            @include tablet {
-                
-            }
+        
             @include desktop {
                 margin-left: 30px; 
             }
