@@ -23,7 +23,7 @@
     }
 
     @include mobile {
-        margin-left: 15px;
+        padding-left: 15px;
     }
 
     @include desktop {
@@ -40,6 +40,10 @@
 
 .icon-clients {
     display: inline-block;
+
+    @include mobile {
+        width: 44%;
+    }
 
     &:hover svg,
     &:focus svg {
@@ -69,7 +73,7 @@
     transition-timing-function: var(--timing-function);
 
     @include mobile {
-        width: 210px;
+        width: 100%;
     }
 
     @include tablet {
