@@ -172,53 +172,6 @@ textarea {
   }
 }
 
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .menu-button {
-    margin: 0;
-    padding: 0;
-    border: none;
-    background-color: transparent;
-  }
-  .menu-button.icon-cross {
-    display: none;
-  }
-  .menu-button.is-open .icon-cross {
-    display: block;
-  }
-  .menu-button.is-open .icon-menu {
-    display: none;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .menu-button {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .menu-button {
-    display: none;
-  }
-}
-
-@media screen and (min-width: 480px) and (max-width: 767px) {
-  .menu-container {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-  }
-}
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .menu-container {
-    display: none;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .menu-container {
-    display: none;
-  }
-}
-
 .site-nav__link {
   position: relative;
   text-decoration: none;
@@ -1238,6 +1191,152 @@ textarea {
   color: var(--footer-text-color);
 }
 
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .menu-button {
+    margin: 0;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  .menu-button.icon-cross {
+    display: none;
+  }
+  .menu-button.is-open .icon-cross {
+    display: block;
+  }
+  .menu-button:hover svg, .menu-button:focus svg {
+    fill: var(--accent-color);
+    transition-property: fill;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu-button {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .menu-container {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-block-text-color);
+    z-index: 999;
+    transform: translateX(100%);
+    transition: transform var(--duration) var(--timing-function);
+  }
+  .menu-container.is-open {
+    transform: translateX(0);
+  }
+}
+.menu-container .menu-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  margin-right: 15px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .menu-container {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .menu-container {
+    display: none;
+  }
+}
+
+.mobile-menu {
+  padding-left: 40px;
+}
+
+.mobile-navigation {
+  padding-top: 48px;
+}
+
+.mobile-navigation__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-navigation__link {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 1.17;
+  text-decoration: none;
+  display: block;
+  color: var(--primary-text-color);
+  letter-spacing: 0.02em;
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+.mobile-navigation__link--current {
+  color: var(--accent-color);
+}
+.mobile-navigation__link:hover, .mobile-navigation__link:focus {
+  color: var(--accent-color);
+  transition-property: color;
+  transition-duration: var(--duration);
+  transition-timing-function: var(--timing-function);
+}
+
+.mobile-contacts {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1.17;
+  margin-top: 306px;
+}
+
+.mobile-contacts__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contacts__link {
+  text-decoration: none;
+  color: var(--accent-color);
+}
+
+.mobile-contacts__text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.16;
+  color: rgb(117, 117, 117);
+  margin-bottom: 64px;
+}
+
+.mobile-socials {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 1.22;
+  display: flex;
+  margin-top: 64px;
+}
+.mobile-socials__link {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.mobile-socials__item:not(:last-child)::after {
+  content: "";
+  width: 22px;
+  height: 1px;
+  flex-grow: 1;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 .backdrop {
   width: 100%;
   height: 100%;
@@ -1266,7 +1365,6 @@ textarea {
   background-color: #FFFFFF;
   transform: translate(-50%, -50%) scale(1);
   transition: transform var(--duration) var(--timing-function);
-  position: relative;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   padding: 40px;
 }
