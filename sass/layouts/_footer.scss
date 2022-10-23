@@ -39,6 +39,10 @@
     justify-content: center;
     flex-direction: column;
 
+    @include mobile {
+      margin-bottom: 60px;
+    }
+
   @include desktop {
     display: block;
   }
