@@ -39,6 +39,7 @@
     @include mobile {
         @include size(100vw, 100vh);
       position: fixed;
+      padding-top: 48px;
       top: 0;
       left: 0;   
       background-color: var(--main-block-text-color);
@@ -71,10 +72,6 @@
 
   .mobile-menu {
     padding-left: 3%;
-  }
-
-  .mobile-navigation {
-    padding-top: 48px;
   }
 
   .mobile-navigation__item:not(:last-child) {

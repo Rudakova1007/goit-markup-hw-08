@@ -70,6 +70,8 @@ textarea {
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
@@ -318,7 +320,6 @@ textarea {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-bottom: 60px;
 }
 @media screen and (min-width: 1200px) {
   .location {
@@ -383,6 +384,7 @@ textarea {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .socials {
     display: block;
+    text-align: center;
   }
 }
 @media screen and (min-width: 390px) and (max-width: 1199px) {
@@ -811,8 +813,8 @@ textarea {
 }
 
 @media screen and (min-width: 390px) and (max-width: 767px) {
-  .feature-item {
-    margin: 15px 30px;
+  .feature-item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -1233,6 +1235,7 @@ textarea {
     width: 100vw;
     height: 100vh;
     position: fixed;
+    padding-top: 48px;
     top: 0;
     left: 0;
     background-color: var(--main-block-text-color);
@@ -1264,10 +1267,6 @@ textarea {
 
 .mobile-menu {
   padding-left: 3%;
-}
-
-.mobile-navigation {
-  padding-top: 48px;
 }
 
 .mobile-navigation__item:not(:last-child) {

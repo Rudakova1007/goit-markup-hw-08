@@ -34,9 +34,9 @@
     }
 }
 
-.feature-item {
+.feature-item:not(:last-child) {
     @include mobile {
-        margin: 15px 30px;
+       margin-bottom: 30px;
     }
 }
 
