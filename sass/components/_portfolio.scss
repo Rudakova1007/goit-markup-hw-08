@@ -1,12 +1,12 @@
 
-.item-title {
+.position-item__title {
     @include font(18px, 700, 1.2);
     letter-spacing: 0.06em;
     color: var(--primary-text-color);
     margin-bottom: 4px;
     }
 
-.item-description {
+.position-item__description {
     @include font(16px, 400, 1.87);
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
